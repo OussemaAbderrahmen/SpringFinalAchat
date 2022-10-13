@@ -28,13 +28,6 @@ pipeline {
             }
         }
 
-        stage("MVN build"){
-            steps {
-                sh """mvn compile -e """
-                
-            }
-        }
-
     
         
         
