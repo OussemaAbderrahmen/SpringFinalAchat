@@ -8,7 +8,7 @@ pipeline {
             steps {
             
                 git branch: 'main', url: 'https://github.com/OussemaAbderrahmen/SpringFinalAchat.git',
-                credentialsId : '	d77f4079-5103-428c-9e06-38a6e8a1178a'
+                credentialsId : '		a67e0bc0-1dd1-4b3f-bdfb-85be76c0bd15'
                 
             }
 
