@@ -23,10 +23,19 @@ pipeline {
         
         stage("MVN Clean"){
             steps {
-                sh """mvn clean """
+                sh """mvn clean -e """
                 
             }
         }
+
+        
+         stage("MVN build"){
+            steps {
+                sh """mvn compile -e """
+                
+            }
+        }
+
 
     
         
