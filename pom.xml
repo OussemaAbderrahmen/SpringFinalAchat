@@ -70,6 +70,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
+	<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+		<dependency>
+ 		   	<groupId>org.mockito</groupId>
+  			<artifactId>mockito-core</artifactId>
+   			<scope>test</scope>
+		</dependency>
+	
+		
 	</dependencies>
 
 	<build>
@@ -83,9 +91,13 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.1.0</version>
 			</plugin>
+			<plugin>
+  				<groupId>org.jacoco</groupId>
+  				<artifactId>jacoco-maven-plugin</artifactId>
+  				<version>0.8.9-SNAPSHOT</version>
+			</plugin>
+		
 		</plugins>
 	</build>
-
-
 
 </project>
