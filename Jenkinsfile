@@ -42,7 +42,16 @@ pipeline {
 
             }
         }
-        
+        stage('sonar'){
+            steps {
+                script{ withSonarQubeEnv('SonarQube') {
+                     sh """mvn sonar:sonar -DskipTests"""
+                 }
+
+                }
+            }
+        }
+
         
     }
 
