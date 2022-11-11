@@ -44,8 +44,8 @@ pipeline {
         }
         stage('sonar'){
             steps {
-                script{ withSonarQubeEnv('sq1') {
-                     sh """mvn clean sonar:sonar"""
+                script{ withSonarQubeEnv('sq2') {
+                     sh """mvn sonar:sonar -DskipTests"""
                  }
 
                 }
