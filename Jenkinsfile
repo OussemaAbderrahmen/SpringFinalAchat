@@ -18,8 +18,8 @@ pipeline {
             steps {
 
                 echo 'Pulling...';
-                git branch: 'hedi_ben_hamed',
-                url : 'https://github.com/Fadi1978/SpringDataJPA-CrudRepo';
+                git branch: 'ahmed_bali',
+                url : 'https://github.com/OussemaAbderrahmen/SpringFinalAchat';
             }
         }
 	    
