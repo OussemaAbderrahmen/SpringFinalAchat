@@ -1,10 +1,7 @@
 package com.esprit.examen.entities.dto;
 
 import com.esprit.examen.entities.Facture;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Set;
 
@@ -17,5 +14,4 @@ public class OperateurDTO {
     private String nom;
     private String prenom;
     private String password;
-    private Set<Facture> factures;
 }
