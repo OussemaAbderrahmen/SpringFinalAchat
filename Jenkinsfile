@@ -1,7 +1,7 @@
 pipeline {
     agent any
         environment { 
-        registry = "ideash25/devopsproject" 
+        registry = "ahmedbali/devopsproject" 
         registryCredential = 'dockerHub' 
        
       NEXUS_VERSION="nexus3"
