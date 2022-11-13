@@ -21,14 +21,7 @@ public class StockServiceImpl implements IStockService {
 	public List<Stock> retrieveAllStocks() {
 		// récuperer la date à l'instant t1
 		
-		List<Stock> stocks = (List<Stock>) stockRepository.findAll();
-		for (Stock stock : stocks) {
-			
-		}
-		
-		// récuperer la date à l'instant t2
-		// temps execution = t2 - t1
-		return stocks;
+		return stockRepository.findAll();
 	}
 
 	@Override
@@ -54,16 +47,10 @@ public class StockServiceImpl implements IStockService {
 
 	@Override
 	public Stock retrieveStock(Long stockId) {
-		long start = System.currentTimeMillis();
-		
-		Stock stock = stockRepository.findById(stockId).orElse(null);
-		
-		 long elapsedTime = System.currentTimeMillis() - start;
-		
-
-		return stock;
+		return stockRepository.findById(stockId).orElse(null);
 	}
 
+	StringBuilder bld = new StringBuilder();
 	@Override
 	public String retrieveStatusStock() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -71,9 +58,10 @@ public class StockServiceImpl implements IStockService {
 		String msgDate = sdf.format(now);
 		String finalMessage = "";
 		String newLine = System.getProperty("line.separator");
-		List<Stock> stocksEnRouge = (List<Stock>) stockRepository.retrieveStatusStock();
+		List<Stock> stocksEnRouge = stockRepository.retrieveStatusStock();
 		for (int i = 0; i < stocksEnRouge.size(); i++) {
-			finalMessage = newLine + finalMessage + msgDate + newLine + ": le stock ";
+			bld.append(newLine + finalMessage + msgDate+newLine + ": le stock ");
+			finalMessage = bld.toString();
 					
 
 		}
