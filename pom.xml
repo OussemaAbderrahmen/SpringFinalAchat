@@ -82,9 +82,9 @@
 	</dependencies>
 <distributionManagement>
     <repository>
-      <id>maven-nexus</id>
-      <name>maven-nexus-repo</name>
-      <url>http://192.168.122.1:8081/repository/maven-nexus-repo/</url>
+      <id>deploymentRepo</id>
+      <name>maven-releases</name>
+      <url>http://192.168.122.1:8081/repository/maven-releases/</url>
     </repository>
 </distributionManagement>
 	<build>
