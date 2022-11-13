@@ -1,4 +1,4 @@
-rpipeline {
+pipeline {
     agent any
         environment { 
         registry = "ideash25/devopsproject" 
