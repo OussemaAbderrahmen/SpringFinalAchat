@@ -2,7 +2,7 @@ pipeline {
     agent any
         environment { 
         registry = "ahmedbali/devopsproject" 
-        registryCredential = 'dockerHub' 
+        registryCredential = 'cf9e075a-819f-4c29-af49-4090eae96528' 
        
       NEXUS_VERSION="nexus3"
 	NEXUS_PROTOCOL="http"
