@@ -84,7 +84,7 @@
     <repository>
       <id>maven-nexus</id>
       <name>maven-nexus-repo</name>
-      <url>http://192.168.100.2:8081/repository/maven-nexus-repo/</url>
+      <url>http://192.168.122.1:8081/repository/maven-nexus-repo/</url>
     </repository>
 </distributionManagement>
 	<build>
