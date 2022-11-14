@@ -10,7 +10,7 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +26,8 @@ import com.esprit.examen.repositories.StockRepository;
 @RunWith(SpringRunner.class)
 
 class StockServiceImplTest {
+	
+	private Stock stock = new Stock("test", 10, 10);
 	
 	@InjectMocks
 	static StockServiceImpl stockServiceImpl;
@@ -69,6 +71,15 @@ class StockServiceImplTest {
 		stockServiceImpl.updateStock(mock(Stock.class));
 
 		verify(stockRepository).save(any());
+		
+
+		
+	}
+	
+	@Test
+	void testDeleteStock(){
+		stockServiceImpl.deleteStock(stock.getIdStock());
+		  verify(stockRepository).deleteById(stock.getIdStock());
 		
 
 		
