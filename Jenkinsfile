@@ -72,7 +72,7 @@ pipeline {
                            nexusUrl: '192.168.25.207:8081',
                            nexusVersion: 'nexus3',
                            protocol: 'http',
-                           repository: 'nuget-hosted',
+                           repository: 'devops',
                             version: "1.0"
                         }
                     }
